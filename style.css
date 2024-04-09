@@ -10,11 +10,13 @@ header{
     padding: 1.5rem;
 }
 nav{
-    display: flex;
-    justify-content: center;
+    position:fixed;
+    width: 100%;
+    text-align: center;
 }
 ul, li, a{
-    display: flex;
+    display: inline-block;
+    text-align: center;
     list-style: none;
     text-decoration: none;
 }
@@ -22,8 +24,10 @@ li{
     padding-left: 3rem;
 }
 section{
-    padding-block: 15%;
-    padding-inline: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 .profile-foto{
     float: left;
