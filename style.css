@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 110%;
+}
+header{
+    background-color: #00000000;
+    padding: 1.5rem;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+ul, li, a{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+}
+li{
+    padding-left: 3rem;
+}
+section{
+    padding-block: 15%;
+    padding-inline: 30%;
+}
+.profile-foto{
+    float: left;
+    height: 150px;
+    padding: 2%;
+    border-radius: 50%;
+    shape-outside: circle();
+}
