@@ -4,36 +4,101 @@
 }
 body{
     font-size: 110%;
-}
-header{
-    background-color: #00000000;
+    font-family: sans-serif;
+    background-image: url(./src/img/daniel-leone-v7daTKlZzaw-unsplash.jpg);
+    background-color: #00000020;  
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position-y: 100%;
+    height: 100vh;
+    color: #fff;
 }
 nav{
-    position:fixed;
+    position: fixed;
     padding-block: 1.5rem;
     width: 100%;
+    z-index: 100;
     text-align: center;
+    animation: blurring linear;
+    animation-timeline: scroll();
 }
+@keyframes blurring{
+    to{
+        backdrop-filter: blur(10px);
+        background-color: #00040750;
+    }
+}
+
 ul, li, a{
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     text-decoration: none;
+    color: #fff;
 }
 li{
     padding-left: 3rem;
 }
-section{
+#home{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin-inline: 20%;
+    animation: fade-out linear;
+    animation-timeline: view();
+    animation-range: exit -100px;
+}
+@keyframes fade-out{
+    to{opacity: 0;}
+
 }
 .profile-foto{
-    float: left;
     height: 150px;
     padding: 2%;
     border-radius: 50%;
     shape-outside: circle();
+}
+section>p{
+    float: left;
+}
+#proyects{
+    height: 100vh;
+    padding-inline:10% ;
+    background-image: url(./src/img/matt-howard-UCDiLtfDRgU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    align-content: center;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10%;
+}
+.grid-item{
+    padding: 5%;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 14px;
+    transition: all 0.5s ease-out 0s;
+}
+.grid-item:hover{
+    box-shadow: 10px 10px #00000050;
+    translate: -10px -10px;
+}
+footer{
+    padding: 3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid #fff;
+    background-color: #000505;
+}
+footer>div img{
+    float: left;
+}
+footer>div span{
+    float: right;
 }
