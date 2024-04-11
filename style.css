@@ -7,10 +7,10 @@ body{
 }
 header{
     background-color: #00000000;
-    padding: 1.5rem;
 }
 nav{
     position:fixed;
+    padding-block: 1.5rem;
     width: 100%;
     text-align: center;
 }
